@@ -1,0 +1,5 @@
+sqlalchemy
+python-dotenv
+kafka-python
+psycopg2-binary
+pymysql

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>World Health News</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>World Health News</h1>
+    </header>
+    <div class="container">
+        <div class="description">
+            <p>Choose your location for updated stats on the most recent health news!</p>
+        </div>
+        <form method="POST" action="/events" target="graph_frame">
+            <label for="location">Location:</label>
+            <select name="location" id="location" required>
+                {% for location in locations %}
+                    <option value="{{ location }}">{{ location }}</option>
+                {% endfor %}
+            </select>
+            <label for="time_frame">Time Frame:</label>
+            <select name="time_frame" id="time_frame" required>
+                <option value="week">Past Week</option>
+                <option value="month">Past Month</option>
+                <option value="year">Past Year</option>
+                <option value="decade">Past Decade</option>
+            </select>
+            <button type="submit">Render Graph</button>
+        </form>
+        <iframe name="graph_frame"></iframe>
+        <aside>
+            <h2>Note:</h2>
+            <p>* Simulated health events are updated every four hours.</p>
+            <p>* Anomalies are determined using a random forest model trained on previous anomaly data.</p>
+        </aside>
+    </div>
+</body>
+</html>
+

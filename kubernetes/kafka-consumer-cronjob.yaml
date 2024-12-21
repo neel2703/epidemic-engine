@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: kafka-consumer
+spec:
+  schedule: "0 */4 * * *" # Every 4 hours
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: kafka-consumer
+            image: gcr.io/cloud-computing-435215/kafka-consumer-app:latest
+            resources:
+              requests:
+                cpu: "100m"
+                memory: "1.2Gi"  # Spark requires 1 GiB + buffer for overhead
+              limits:
+                cpu: "500m"
+                memory: "1.5Gi"
+          restartPolicy: OnFailure

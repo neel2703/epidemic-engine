@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #900; /* Red for title */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    font-size: 1.4rem; /* Increased font size */
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-weight: 500; /* Slightly bold for emphasis */
+    color: #444; /* Darker gray for better visibility */
+    text-align: center; /* Center align the text */
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 2rem;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+select, button {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+button {
+    background-color: #900; /* Red button */
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+button:hover {
+    background-color: #b00;
+}
+
+/* Iframe Styles */
+iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Aside Styles */
+aside {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-left: 4px solid #900;
+    font-style: italic;
+    color: #555;
+}
+aside h2 {
+    margin-top: 0;
+    color: #900;
+    font-size: 1.25rem;
+}
