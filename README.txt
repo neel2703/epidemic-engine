@@ -41,8 +41,8 @@ File system:
 
 Description of work:
 
-First, I made fetch_healthEvents. It connects to my AWS database (which I had made for another class, I just added a new table), reads all
-unseen data from the stream, and adds them to the database. After adding all new messages, it prints the total messages and then exits.
+First, I made fetch_healthEvents. It connects to my AWS database, reads all unseen data from the stream, and adds them to the database. 
+After adding all new messages, it prints the total messages and then exits.
 Next, I made a flask app that queries the database for a specific time and place, and then separates the data into buckets and graphs it 
 using plotly. It also takes my trained model from the last homework, a random forest model with .88 accuracy, and predicts whether each
 data point is an anomaly. This is another option to display in the graph. I realized that it got this accuracy by always predicting
@@ -67,6 +67,3 @@ Automatic restart on failure (10)  (When the kubernetes clusters fail they are a
 = 130 points
 
 
-Split of work:
-
-Aiden and Neel worked on this together an equal amount. Aiden pushed as we configured the google cloud stuff for his project.
